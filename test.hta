@@ -2,7 +2,7 @@
   <head>
     <script language="VBScript">
       Set shell = CreateObject("WScript.Shell")
-      shell.Run "powershell -c $b64='SGFja2VkIHUgbG9s'; $hex='4861636b65642075206c6f6c'; $msg1=[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($b64)); $msg2=[Text.Encoding]::UTF8.GetString(([byte[]]($hex -split '([0-9A-Fa-f]{2})' | ? {$_ -ne ''} | % { [Convert]::ToByte($_,16) }))); Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show($msg1); [System.Windows.MessageBox]::Show($msg2)", 0
+      shell.Run("powershell -c $b64='SGFja2VkIHUgbG9s'; $hex='4861636b65642075206c6f6c'; $msg1=[Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($b64)); $msg2=[Text.Encoding]::UTF8.GetString(([byte[]]($hex -split '([0-9A-Fa-f]{2})' | ? {$_ -ne ''} | % { [Convert]::ToByte($_,16) }))); Add-Type -AssemblyName PresentationFramework; [System.Windows.MessageBox]::Show($msg1); [System.Windows.MessageBox]::Show($msg2)", 0)
       self.close
     </script>
   </head>
